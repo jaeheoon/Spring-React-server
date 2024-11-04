@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.board.dao.BoardDAO">
+	<insert id="boardWrite" parameterType="boardDTO">
+		INSERT INTO board
+		(id, name, subject, content)
+		VALUES (#{id}, #{name}, #{subject}, #{content})
+	</insert>
+	
+	<update id="refUpdate">
+		update board set ref=LAST_INSERT_ID() where seq=LAST_INSERT_ID()
+	</update>
+	
+	<select id="getBoardList" resultType="boardDTO">
+		SELECT * FROM board
+		ORDER BY seq DESC
+	</select>
+</mapper>
