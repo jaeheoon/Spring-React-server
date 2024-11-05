@@ -5,7 +5,7 @@ pipeline {
 		    steps {
 		        checkout([$class: 'GitSCM',
 		            branches: [[name: '*/main']],
-		            userRemoteConfigs: [[url: 'https://github.com/BitCamp-SemiProject3/PinterSemi.git']],
+		            userRemoteConfigs: [[url: 'https://github.com/jaeheoon/Spring-React-server.git']],
 		            extensions: [[$class: 'SubmoduleOption', recursiveSubmodules: true, trackingSubmodules: true]]
 		        ])
 		    }
