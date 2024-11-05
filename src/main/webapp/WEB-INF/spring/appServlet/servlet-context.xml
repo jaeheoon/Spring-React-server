@@ -25,7 +25,7 @@
 										  com.member.controller
 										  com.board.controller" />
     <mvc:cors>
-	    <mvc:mapping path="/**" allowed-origins="http://localhost:5173/" allow-credentials="true"/>
+	    <mvc:mapping path="/**" allowed-origins="http://211.188.54.228:3000/" allow-credentials="true"/>
 	</mvc:cors>
 	
 </beans:beans>
